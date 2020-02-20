@@ -23,15 +23,7 @@ class Kandangs extends Component {
     // this.API_URL = "https://api.fawwazlab.com/lapor/api/jenis_laporan";
 
     this.state = {
-      kandangs: [
-        {
-          id: "",
-          code: "",
-          name: "",
-          population: "",
-          address: ""
-        }
-      ],
+      kandangs: [],
 
       txt_code: "",
       txt_name: "",

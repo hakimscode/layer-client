@@ -26,33 +26,8 @@ class Projects extends Component {
     // this.API_URL = "https://api.fawwazlab.com/lapor/api/jenis_laporan";
 
     this.state = {
-      projects: [
-        {
-          id: "",
-          kandang_id: "",
-          periode: "",
-          populasi_awal: "",
-          tanggal_mulai: "",
-          tanggal_closing: "",
-          status: "",
-          kandang: {
-            id: "",
-            code: "",
-            name: "",
-            population: "",
-            address: ""
-          }
-        }
-      ],
-      arrKandang: [
-        {
-          id:"",
-          code: "",
-          name:"",
-          population: "",
-          address: ""
-        }
-      ],
+      projects: [],
+      arrKandang: [],
       txt_kandang: "",
       txt_periode: "",
       txt_populasi_awal: "",

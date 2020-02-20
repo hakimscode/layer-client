@@ -23,14 +23,7 @@ class Suppliers extends Component {
     // this.API_URL = "https://api.fawwazlab.com/lapor/api/jenis_laporan";
 
     this.state = {
-      suppliers: [
-        {
-          id: "",
-          supplier_code: "",
-          supplier_name: "",
-          address: ""
-        }
-      ],
+      suppliers: [],
 
       txt_supplier_code: "",
       txt_supplier_name: "",

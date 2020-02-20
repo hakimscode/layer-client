@@ -25,52 +25,9 @@ class Penjualan extends Component {
     this.API_URL_PROJECTS = "http://localhost:5000/projects";
 
     this.state = {
-      penjualan: [
-        {
-          id: "",
-          tanggal: "",
-          project_id: "",
-          customer_id: "",
-          penjualan_detail: {
-            jumlah_jual: 0,
-            tonase_jual: 0
-          },
-          customer: {
-            id:"",
-            customer_code: "",
-            customer_name: "",
-            address: ""
-          },
-          project: {
-            id: "",
-            kandang_id:"",
-            nama: "",
-            periode:"",
-            kandang:{
-              code: "",
-              name: ""
-            }
-          }
-        }
-      ],
-      arrProject: [
-        {
-          id: "",
-          kandang_id: "",
-          periode: "",
-          kandang: {
-            code: "",
-            name: ""
-          }
-        }
-      ],
-      arrCustomer: [
-        {
-          id: "",
-          customer_code: "",
-          customer_name: ""
-        }
-      ],
+      penjualan: [],
+      arrProject: [],
+      arrCustomer: [],
       txt_tanggal: "",
       txt_project_id: "",
       txt_customer_id: "",

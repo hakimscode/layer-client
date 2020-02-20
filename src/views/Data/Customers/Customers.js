@@ -23,14 +23,7 @@ class Customers extends Component {
     // this.API_URL = "https://api.fawwazlab.com/lapor/api/jenis_laporan";
 
     this.state = {
-      customers: [
-        {
-          id: "",
-          customer_code: "",
-          customer_name: "",
-          address: ""
-        }
-      ],
+      customers: [],
 
       txt_customer_code: "",
       txt_customer_name: "",

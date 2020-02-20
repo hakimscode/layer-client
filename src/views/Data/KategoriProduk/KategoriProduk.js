@@ -23,12 +23,7 @@ class KategoriProduk extends Component {
     // this.API_URL = "https://api.fawwazlab.com/lapor/api/jenis_laporan";
 
     this.state = {
-      kt_produk: [
-        {
-          id: "",
-          nama: ""
-        }
-      ],
+      kt_produk: [],
       txt_nama: "",
       txt_id: "",
 

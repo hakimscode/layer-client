@@ -26,62 +26,10 @@ class Pembelian extends Component {
     this.API_URL_PRODUCTS = "http://localhost:5000/produk";
 
     this.state = {
-      pembelian: [
-        {
-          id: "",
-          tanggal: "",
-          project_id: "",
-          supplier_id: "",
-          pembelian_detail: {
-            jumlah_beli: 0,
-            tonase_beli: 0,
-            produk: {
-              id: "",
-              nama_produk: ""
-            }
-          },
-          supplier: {
-            id:"",
-            supplier_code: "",
-            supplier_name: "",
-            address: ""
-          },
-          project: {
-            id: "",
-            kandang_id:"",
-            nama: "",
-            periode:"",
-            kandang:{
-              code: "",
-              name: ""
-            }
-          }
-        }
-      ],
-      arrProject: [
-        {
-          id: "",
-          kandang_id: "",
-          periode: "",
-          kandang: {
-            code: "",
-            name: ""
-          }
-        }
-      ],
-      arrSupplier: [
-        {
-          id: "",
-          supplier_code: "",
-          supplier_name: ""
-        }
-      ],
-      arrProducts: [
-        {
-          id: "",
-          nama_produk: "",
-        }
-      ],
+      pembelian: [],
+      arrProject: [],
+      arrSupplier: [],
+      arrProducts: [],
       txt_tanggal: "",
       txt_project_id: "",
       txt_supplier_id: "",
