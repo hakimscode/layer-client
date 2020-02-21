@@ -76,6 +76,18 @@ class DetailProject extends Component {
         })
     }
 
+    totalPakan() {
+      let totalPakan = 0;
+      let totalJumlah = 0;
+      let totalTonase = 0;
+      this.state.detailProject.project_recording_harians.forEach(recording => {
+          totalPakan += parseInt(recording.pakan);
+          totalJumlah += parseInt(recording.jumlah_telur);
+          totalTonase += parseInt(recording.tonase_telur);
+      });
+      this.setState({totalPakan, totalJumlah, totalTonase});
+    }
+
     cancelClick = () => {
       this.setState({
         txt_id: "",
@@ -109,6 +121,7 @@ class DetailProject extends Component {
               detailProject.project_recording_harians = [...this.state.detailProject.project_recording_harians, res.data.data]
               return {detailProject}
             });
+            this.totalPakan();
             this.cancelClick();
           } else {
             console.log("error");
