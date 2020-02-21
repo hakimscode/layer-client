@@ -70,7 +70,7 @@ class Projects extends Component {
   handleSubmit = e => {
     e.preventDefault();
     axios
-        .put(this.API_URL + "/" + this.state.txt_id, {
+        .post(this.API_URL, {
           kandang_id: this.state.txt_kandang,
           periode: this.state.txt_periode,
           populasi_awal: this.state.txt_populasi_awal,
@@ -79,20 +79,7 @@ class Projects extends Component {
         .then(res => {
           if (res.status === 201) {
             this.setState({
-              projects: this.state.projects.map(project => {
-                if (project.id === res.data.data.id) {
-                  project.kandang_id = res.data.data.kandang_id;
-                  project.kandang.id = res.data.data.kandang.id;
-                  project.kandang.code = res.data.data.kandang.code;
-                  project.kandang.name = res.data.data.kandang.name;
-                  project.kandang.population = res.data.data.kandang.population;
-                  project.kandang.address = res.data.data.kandang.address;
-                  project.periode = res.data.data.periode;
-                  project.populasi_awal = res.data.data.populasi_awal;
-                  project.tanggal_mulai = res.data.data.tanggal_mulai;
-                }
-                return project;
-              })
+              projects: [...this.state.projects, res.data.data]
             });
             this.cancelClick();
           } else {
